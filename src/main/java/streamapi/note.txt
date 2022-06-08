@@ -1,0 +1,12 @@
+stream API :
+
+
+i/o stream : sequence of data that read or write from destination
+
+stream api :
+           1)To process group of objects
+           2)1.8
+           3)perform bulk operation to process objects of collection
+           4)reduce code length(boilerplate code)
+           5)stream api are related to collection framework(group of objects). These streams are very different from
+             io stream
