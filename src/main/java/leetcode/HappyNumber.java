@@ -8,6 +8,8 @@ public class HappyNumber {
         System.out.println(isHappyNumber(19)); //output =true
         System.out.println(isHappyNumber(2));  //output =false;
 
+        System.out.println(isHappy(19));
+        System.out.println(isHappy(2));
     }
 
     public static boolean isHappyNumber(int n) {
@@ -30,5 +32,17 @@ public class HappyNumber {
             set.add(sum);
             n=sum;
         }
+    }
+
+    //way 2
+    public static boolean isHappy(int n) {
+        if(n == 1) return true;
+        if(n == 4) return false;
+        int sum = 0;
+        while(n > 0){
+            sum += Math.pow(n%10,2);
+            n /= 10;
+        }
+        return isHappy(sum);
     }
 }
