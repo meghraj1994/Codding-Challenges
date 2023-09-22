@@ -1,0 +1,5 @@
+there are mainly 3 types of cursor in java ;
+
+1)iteration
+2)list iteration
+3)enumeration
