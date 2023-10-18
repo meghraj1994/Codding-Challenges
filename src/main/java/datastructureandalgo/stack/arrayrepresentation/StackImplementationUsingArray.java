@@ -61,7 +61,6 @@ public class StackImplementationUsingArray {
             System.out.println("stack is empty");
             return;
         }
-
         System.out.println("stack array elements are :");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
