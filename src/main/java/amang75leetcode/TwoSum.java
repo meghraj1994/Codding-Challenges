@@ -1,4 +1,4 @@
-package amang75;
+package amang75leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;

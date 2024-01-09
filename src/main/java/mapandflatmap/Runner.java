@@ -30,7 +30,7 @@ public class Runner {
         //using flat map
         System.out.println("using flat map");
         List<Integer> phones = customers.stream().flatMap(customer -> customer.getPhoneNumbers().stream()).collect(Collectors.toList());
-        System.out.println(phoneNumbers);
+        System.out.println(phones);
     }
 
 

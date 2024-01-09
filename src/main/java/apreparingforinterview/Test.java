@@ -1,44 +1,40 @@
 package apreparingforinterview;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+public class Test {
 
-public class Test  {
 
     public static void main(String[] args) {
+      String[] strs1 = {"flower","flow","flight"};
+      String[] strs2 = {"dog","racecar","car"};
 
+        System.out.println(longestCommonPrefix(strs1));
+        System.out.println(longestCommonPrefix(strs2));
 
-        int[] intArray = {1,2,3,4,5,6};
-        System.out.println(isUnique(intArray));
-        test();
 
     }
+        public static String longestCommonPrefix(String[] strs) {
+            if(strs.length == 0) return "";
+            String newString = strs[0];
+            for(int i = 1 ; i< strs.length ; i++) {
+                int p1=0;
+                while(p1<newString.length() && p1<strs[i].length() &&
+                        newString.charAt(p1) == strs[i].charAt(p1)) {
+                    p1++;
+                }
+                if(p1 == 0) return "";
 
-    public static boolean isUnique(int[] intArray) {
-        for(int i=0; i<intArray.length;i++){
-            int index = Math.abs(intArray[i])-1;
-
-            if(intArray[index] < 0){
-                return true;
-            } else {
-                intArray[index] = - intArray[index];
+                newString = newString.substring(0,p1);
             }
+            return newString;
         }
-        return false;
     }
 
-    public static void test() {
-        List<Integer> arrList1 = new ArrayList<>(Arrays.asList(1,2,3,4,5));
-        arrList1.add(2,9);
-        System.out.println(arrList1);
 
 
-        int[] arr = new int[]{1,2,3};
-         arr[1] = 9;
-        System.out.println(Arrays.toString(arr));
-    }
-}
+
+
+
+
 
 
 

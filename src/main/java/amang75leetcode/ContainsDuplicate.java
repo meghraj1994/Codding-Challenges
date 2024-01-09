@@ -1,4 +1,4 @@
-package amang75;
+package amang75leetcode;
 
 import java.util.HashSet;
 import java.util.Set;
