@@ -1,0 +1,26 @@
+package phase1;
+
+public class R_Rotate_An_Image {
+
+    public void rotateAnImage(int[][] matrix) {
+        int n = matrix.length;          //length of row
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i; i < n; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n / 2; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][n - 1 - j];
+                matrix[i][n - 1 - j] = temp;
+            }
+        }
+
+
+    }
+}
